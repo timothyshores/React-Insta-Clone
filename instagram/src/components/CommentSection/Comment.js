@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components'
 
-// import './Comment.css';
-
 const CommentText = styled.div`
     text-align: left;
     padding: 2px;
@@ -15,7 +13,7 @@ const CommentSpan = styled.span`
     font-size: 14px;
 `;
 
-const user = styled.span`
+const User = styled.span`
     font-weight: 500;
     font-size: 12px;
 `;
@@ -24,7 +22,7 @@ const Comment = props => {
     return (
         <CommentText>
             <CommentSpan>{props.comment.text}</CommentSpan>{' '}
-            <span className="user">-{props.comment.username}</span>
+            <User>-{props.comment.username}</User>
         </CommentText>
     );
 };
