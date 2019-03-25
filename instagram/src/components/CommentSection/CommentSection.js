@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './CommentSection.css';
 
 const CommentSection = props => {
@@ -7,5 +8,10 @@ const CommentSection = props => {
         <h2>CommentSection Component</h2>
     );
 };
+
+CommentSection.propTypes = {
+
+};
+
 
 export default CommentSection;
