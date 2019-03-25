@@ -8,11 +8,13 @@ const CommentSection = props => {
     // console.log('CommentSection props', commentsArray);
     return (
         <div className="comment-section">
-            <h2>CommentSection Component</h2>
             {console.log('commentsArray', commentsArray)}
             {commentsArray.map((comment, index) => (
                 <Comment comment={comment} key={index} />
             ))}
+            <div className="add-new comment">
+                <input type="text" className="add-comment" placeholder="Add a comment..."></input>
+            </div>
         </div>
     );
 };

@@ -12,7 +12,7 @@
     height: 20px;
 }
 
-.username {
+.post-container .username {
     margin-left: 15px;
 }
 
@@ -35,4 +35,8 @@
 .likes {
     text-align: left;
     font-weight: 600;
+}
+
+.likes p {
+    margin: 0;
 }

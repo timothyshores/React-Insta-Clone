@@ -3,9 +3,13 @@ import PropTypes from 'prop-types';
 import './Comment.css';
 
 const Comment = props => {
-    console.log('Comment props', props);
+    console.log('Comment props', props.comment);
+    const { username, text } = props.comment;
     return (
-        <h2>Comment Component</h2>
+        <div className="comment">
+            <span className="username">{username}</span>
+            <span className="comment-text">{text}</span>
+        </div>
     );
 };
 
