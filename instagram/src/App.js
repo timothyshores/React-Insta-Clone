@@ -22,7 +22,9 @@ class App extends Component {
             <div className="App">
                 <h1>React Instagram Clone</h1>
                 <SearchBar />
-                <PostContainer />
+                {this.state.data.map(post => (
+                    <PostContainer post={post} key={post.imageUrl} />
+                ))}
                 <CommentSection />
             </div>
         );
