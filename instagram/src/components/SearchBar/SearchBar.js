@@ -10,15 +10,15 @@ const SearchBar = props => {
             <div className="left-column">
                 <i className="instagram-icon" class="fab fa-instagram fa-2x"></i>
                 <span className="vertical-divider"> | </span>
-                <img className="instagram-logo" src={instagramLogo}></img>
+                <img className="instagram-logo" src={instagramLogo} alt="instagram cursive logo"></img>
             </div>
             <div className="middle-column">
-                <input type="text" className="search-bar" placeholder="🔍 Search"></input>
+                <input type="text" className="search-bar-input" placeholder="🔍 Search"></input>
             </div>
             <div className="right-column">
-                <img className="discover-icon" src={discoverIcon}></img>
+                <img className="discover-icon" src={discoverIcon} alt="discover icon"></img>
                 <p className="heart-icon">♡</p>
-                <img className="profile-icon" src={profileIcon}></img>
+                <img className="profile-icon" src={profileIcon} alt="profile icon"></img>
             </div>
         </div>
     );

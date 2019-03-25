@@ -19,7 +19,6 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <h1>React Instagram Clone</h1>
                 <SearchBar />
                 {this.state.data.map(post => (
                     <PostContainer post={post} key={post.imageUrl} />
