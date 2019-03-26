@@ -16,7 +16,7 @@
 .middle-column {
     height: 30px;
     width:30vw;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .right-column {
@@ -43,19 +43,20 @@
 
 .search-bar-input {
     width: 150px;
+    margin-top: 12.5px;
 }
 
 .right-column .discover-icon {
-    height: 30px;
+    height: 25px;
 }
 
 .right-column  .heart-icon {
     font-size: 2rem;
-    margin: 0;
+    margin: 0 5px;
     font-weight: 100;
     color: grey;
 }
 
 .right-column .profile-icon {
-    height: 30px;
+    height: 35px;
 }
