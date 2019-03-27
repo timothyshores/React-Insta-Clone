@@ -8,7 +8,9 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            data: []
+            data: [],
+            filteredPosts: [],
+            search: ''
         };
     }
 
@@ -16,13 +18,44 @@ class App extends Component {
         this.setState({ data: data });
     }
 
+    searchPostsHandler = event => {
+        console.log('searchPostsHandler', event.target.value);
+        this.setState({
+            search: event.target.value,
+            filteredPosts:
+                this.state.data.filter(post => {
+                    if (post.username.includes(event.target.value)) {
+                        console.log('post', post);
+                        return post;
+                    }
+                })
+        });
+    };
+
+    handleSearch = event => {
+        if (event.target.value === '') {
+            console.log('empty search');
+            this.setState({ data: data });
+        }
+        this.setState({
+            search: event.target.value,
+            filteredPosts: this.state.data.filter(post => post.username.includes(event.target.value))
+        });
+    };
+
+
     render() {
         return (
             <div className="App">
-                <SearchBar />
-                {this.state.data.map(post => (
-                    <PostContainer post={post} key={post.imageUrl} />
-                ))}
+                <SearchBar search={this.state.search} handleSearch={this.searchPostsHandler} />
+                {this.state.search.length > 0 ?
+                    this.state.filteredPosts.map(post => (
+                        <PostContainer post={post} key={post.imageUrl} />
+                    )) :
+                    this.state.data.map(post => (
+                        <PostContainer post={post} key={post.imageUrl} />
+                    ))
+                }
             </div>
         );
     }
