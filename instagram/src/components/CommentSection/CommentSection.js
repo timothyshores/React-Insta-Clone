@@ -21,11 +21,13 @@ class CommentSection extends React.Component {
     }
 
     handleSubmit = event => {
+        event.preventDefault();
         this.setState({
             comments: [...this.props.comments, {
                 username: 'timothyshores',
                 text: this.state.newComment
-            }]
+            }],
+            newComment: ''
         });
     }
 
@@ -35,7 +37,10 @@ class CommentSection extends React.Component {
                 {this.state.comments.map((comment, index) => (
                     <Comment comment={comment} key={index} />
                 ))}
-                <div className="add-new comment">
+                <form
+                    className="add-new comment"
+                    onSubmit={this.handleSubmit}
+                >
                     <input
                         type="text"
                         className="add-comment"
@@ -44,7 +49,7 @@ class CommentSection extends React.Component {
                         onChange={this.handleChanges}
                     />
                     <button onClick={this.handleSubmit}> Post </button>
-                </div>
+                </form>
             </div>
         );
     }
