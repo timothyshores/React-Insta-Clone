@@ -7,56 +7,7 @@
     margin: 0 auto;
 }
 
-.left-column {
-    display: flex;
-    align-items: center;
-    width:30vw;
-}
-
-.middle-column {
-    height: 30px;
-    width:30vw;
-    align-items: flex-end;
-}
-
-.right-column {
-    display: flex;
-    width:30vw;
-    align-items: center;
-    justify-content: flex-end;
-}
-
 .left-column .instagram-icon {
     font-size: 2rem;
     font-weight: 900;
-}
-
-.left-column .vertical-divider {
-    margin: 0 10px;
-    font-size: 1.5rem;
-}
-
-.left-column .instagram-logo {
-    height: 30px;
-    margin: 7.5px 0 0;
-}
-
-.search-bar-input {
-    width: 150px;
-    margin-top: 12.5px;
-}
-
-.right-column .discover-icon {
-    height: 25px;
-}
-
-.right-column  .heart-icon {
-    font-size: 2rem;
-    margin: 0 5px;
-    font-weight: 100;
-    color: grey;
-}
-
-.right-column .profile-icon {
-    height: 35px;
 }
