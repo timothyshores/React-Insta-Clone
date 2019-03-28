@@ -1,7 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Comment from './Comment'
-import './CommentSection.css';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const AddComment = styled.input`
+    width: 500px;
+`;
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -41,9 +45,8 @@ class CommentSection extends React.Component {
                     className="add-new comment"
                     onSubmit={this.handleSubmit}
                 >
-                    <input
+                    <AddComment
                         type="text"
-                        className="add-comment"
                         placeholder="Add a comment..."
                         value={this.state.newComment}
                         onChange={this.handleChanges}
